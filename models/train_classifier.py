@@ -33,15 +33,24 @@ def load_data(database_filepath):
         pd.DataFrame / Y
         list / category_names
     '''
+<<<<<<< HEAD
     
     engine = create_engine('sqlite:///' + database_filepath)
+=======
+    engine = create_engine('sqlite:///' + database_filepath)
+#    filepath = database_filepath.rsplit('/')[1]
+>>>>>>> e451611e4fb36aed7ccee285d9e7cdaec5b213ff
     df = pd.read_sql(database_filepath, con = engine)
     X = df['message']
     Y = df.loc[:, ~df.columns.isin(['message', 'id', 'original', 'genre'])]
     category_names = Y.columns
     
     return X, Y, category_names
+<<<<<<< HEAD
 
+=======
+#%%
+>>>>>>> e451611e4fb36aed7ccee285d9e7cdaec5b213ff
 def tokenize(text):
     '''
     Tokenizes a string object:
@@ -54,7 +63,10 @@ def tokenize(text):
     Input: str / text
     Returns: str / text
     '''
+<<<<<<< HEAD
     
+=======
+>>>>>>> e451611e4fb36aed7ccee285d9e7cdaec5b213ff
     #Normalize text
     text = re.sub(r"[^a-zA-Z0-9]", " ", text.lower())
     # Tokenize
@@ -76,7 +88,10 @@ def build_model():
     Input: -
     Returns: sklearn.model object / model
     '''
+<<<<<<< HEAD
     
+=======
+>>>>>>> e451611e4fb36aed7ccee285d9e7cdaec5b213ff
     pipeline = Pipeline([('tfidf', TfidfVectorizer(tokenizer = tokenize)),
                     ('clf', MultiOutputClassifier(DecisionTreeClassifier()))])
     
@@ -119,7 +134,10 @@ def save_model(model, model_filepath):
     Returns:
         -
     '''
+<<<<<<< HEAD
     
+=======
+>>>>>>> e451611e4fb36aed7ccee285d9e7cdaec5b213ff
     pickle.dump(model, open(model_filepath, 'wb'))
 
 

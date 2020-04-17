@@ -26,11 +26,19 @@ def tokenize(text):
     return clean_tokens
 
 # load data
+<<<<<<< HEAD
 engine = create_engine('sqlite:///../data/DisasterResponse.db')
 df = pd.read_sql_table('data/DisasterResponse.db', engine)
 
 # load model
 model = joblib.load("../models/classifier.pkl")
+=======
+engine = create_engine('sqlite:///../data/YourDatabaseName.db')
+df = pd.read_sql_table('YourTableName', engine)
+
+# load model
+model = joblib.load("../models/your_model_name.pkl")
+>>>>>>> e451611e4fb36aed7ccee285d9e7cdaec5b213ff
 
 
 # index webpage displays cool visuals and receives user input text for model
@@ -39,17 +47,23 @@ model = joblib.load("../models/classifier.pkl")
 def index():
     
     # extract data needed for visuals
+<<<<<<< HEAD
     #1st plot
+=======
+>>>>>>> e451611e4fb36aed7ccee285d9e7cdaec5b213ff
     # TODO: Below is an example - modify to extract data for your own visuals
     genre_counts = df.groupby('genre').count()['message']
     genre_names = list(genre_counts.index)
     
+<<<<<<< HEAD
     #2nd plot
     basic_needs = basic_needs = ['medical_help', 'medical_products', 'water', 'food']
     basic_counts = df[basic_needs][df[basic_needs] == True].count()
     basic_names = list(basic_counts.index)
     
     
+=======
+>>>>>>> e451611e4fb36aed7ccee285d9e7cdaec5b213ff
     # create visuals
     # TODO: Below is an example - modify to create your own visuals
     graphs = [
@@ -70,6 +84,7 @@ def index():
                     'title': "Genre"
                 }
             }
+<<<<<<< HEAD
         },
         {
             'data': [
@@ -91,6 +106,9 @@ def index():
         }
         
         
+=======
+        }
+>>>>>>> e451611e4fb36aed7ccee285d9e7cdaec5b213ff
     ]
     
     # encode plotly graphs in JSON
