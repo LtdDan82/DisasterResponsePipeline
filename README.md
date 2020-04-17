@@ -1,5 +1,22 @@
 # Disaster Response Pipeline Project
 
+### Installation
+Python Version >= 3.5x
+
+Packages used:
+	- numpy
+    - pandas
+    - regex
+    - nltk
+    - scikit-learn
+    - plotly
+    - flask
+    - json
+    - sqlalchemy
+    - pickle
+
+Dataset is used from [Figure-Eight](https://www.figure-eight.com/)
+
 ### Instructions:
 1. Run the following commands in the project's root directory to set up your database and model.
 
