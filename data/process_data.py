@@ -7,13 +7,13 @@ def load_data(messages_filepath, categories_filepath):
     '''
     Reads in two csv files and merges them on column "id"
     
-<<<<<<< HEAD
+
     Inputs: str / path to csvfiles
     Returns: pd.DataFrame / df
-=======
+
     Inputs: str. path to csvfiles
     Returns: pd.DataFrame. df
->>>>>>> e451611e4fb36aed7ccee285d9e7cdaec5b213ff
+
     '''
     messages = pd.read_csv(messages_filepath)
     categories = pd.read_csv(categories_filepath)
@@ -73,10 +73,7 @@ def save_data(df, database_filename):
     Returns:
         -
     '''
-<<<<<<< HEAD
-=======
-    
->>>>>>> e451611e4fb36aed7ccee285d9e7cdaec5b213ff
+
     engine = create_engine('sqlite:///' + database_filename)
     df.to_sql(database_filename, engine, index=False) 
 
@@ -85,10 +82,9 @@ def main():
     if len(sys.argv) == 4:
 
         messages_filepath, categories_filepath, database_filepath = sys.argv[1:]
-<<<<<<< HEAD
+
        # 'disaster_messages.csv', 'disaster_categories.csv', 'disaster_01' = sys.argv[1:]
-=======
->>>>>>> e451611e4fb36aed7ccee285d9e7cdaec5b213ff
+
 
         print('Loading data...\n    MESSAGES: {}\n    CATEGORIES: {}'
               .format(messages_filepath, categories_filepath))
