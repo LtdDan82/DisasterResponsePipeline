@@ -1,7 +1,7 @@
 # Disaster Response Pipeline Project
 ### Project Summary
 Task of this project was to read in textdata that could possibly contain information on disasters (like medical help, water, ...). 
-1st step: The dataset is cleaned (duplicates, etc.) and natural language processing in terms of tokenization (word_tokenize, lemmatize) is carried out to generate certain features. The dataset is save din an SQL .db file.
+1st step: The dataset is cleaned (duplicates, etc.) and natural language processing in terms of tokenization (word_tokenize, lemmatize) is carried out to generate certain features. The dataset is saved in an SQL .db file.
 
 2nd step: A Machine Learning pipeline with GridSearch included is created and a DecisionTree Classifer is trained on the trainset and evaluated on testset data. The trained model is then saved to a pickle file. The trained model will be used for further input of textdata in the app.
 
